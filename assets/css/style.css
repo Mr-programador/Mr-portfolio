@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --color-primary: #191923;
+  --color-secondary: #B14AED;
+  --color-tertiary: #0E79B2;
+  --color-contrast: #E4DFDA;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20pt;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide any overflowed content from the background */
+  position: relative; /* Needed for positioning floating stars */
+}
+
+/* Add some spacing to the header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Adjust the menu height and add some padding */
+.menu {
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 420px; /* Reduced the height to fit the content better */
+  flex-direction: column;
+  width: 100%;
+  min-width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 20px; /* Add padding to separate from the header */
+}
+
+/* Adjust the list item size and text alignment */
+.list a {
+  text-decoration: none;
+  color: var(--color-contrast);
+  font-size: 2.4em;
+  font-weight: 700;
+  line-height: 1.4;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.555);
+  transition: color 0.3s;
+  padding: 8px 0; /* Add some padding to the list items */
+  text-align: center; /* Center the text within the list items */
+}
+
+.list a:hover {
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.555);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+/* Improve the styling of the foto-perfil section */
+.foto-perfil {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px; /* Changed min-width to min-height for better sizing */
+}
+
+.foto-perfil img {
+  width: 100%;
+}
+
+.aside {
+  display: inline;
+}
+
+/* Add some spacing to the footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Continue with the animated background and stars styles as before */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-tertiary), var(--color-primary));
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
